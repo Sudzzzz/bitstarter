@@ -6,7 +6,7 @@ var app = express.createServer(express.logger());
 
 function getMsg(readfile){
     var buff = fs.readFileSync(readfile);
-    return buff.toString('utf8',0,27);
+    return buff.toString('utf8',0,buffer.length);
 }
 
 app.get('/', function(request, response) {
