@@ -1,7 +1,6 @@
 var express = require('express');
 var fs = require('fs');
 var rfile = "index.html";
-var msg = "";
 var app = express.createServer(express.logger());
 
 function getMsg(readfile){
@@ -13,7 +12,7 @@ app.get('/', function(request, response) {
   response.send(getMsg(rfile));
 });
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 8080;
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
